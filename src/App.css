@@ -8,7 +8,7 @@ html {
 
 .Container {
   width: 350px;
-  height: 350px;
+  height: 400px;
   position: relative;
   margin: 10px auto;
 }
@@ -60,6 +60,10 @@ html {
 }
 
 .item.month {
+  font-size: 0.875rem;
+}
+
+.item.weekday {
   font-size: 0.875rem;
 }
 

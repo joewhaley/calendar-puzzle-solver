@@ -2,16 +2,16 @@ import { uniqBy } from 'lodash'
 
 // 7 x 7
 export const puzzleByType = {
-  LEFT:
-    [
-      '......x',
-      '......x',
-      '.......',
-      '.......',
-      '.......',
-      '.......',
-      '...xxxx',
-    ],
+  LEFT: [
+    '......x',
+    '......x',
+    '.......',
+    '.......',
+    '.......',
+    '.......',
+    '.......',
+    'xxxx...',
+  ],
   CENTER: [
     'x.....x',
     '.......',
@@ -19,14 +19,15 @@ export const puzzleByType = {
     '.......',
     '.......',
     '.......',
-    '...xxxx',
+    '.......',
+    'xxxx...',
   ],
 }
 
-export const ROWS = 7
+export const ROWS = 8
 export const COLS = 7
 
-// 8
+// 10
 export const items = [
   [
     'x...',
@@ -43,7 +44,6 @@ export const items = [
   ],
   [
     'xxxx',
-    '..x.',
   ],
   [
     '.xx',
@@ -54,13 +54,22 @@ export const items = [
     'x.x',
   ],
   [
-    'xxx',
-    'xxx',
+    '.xx',
+    'xx.',
   ],
   [
     'x..',
     'x..',
     'xxx',
+  ],
+  [
+    'xxx',
+    'x..',
+  ],
+  [
+    'xxx',
+    '.x.',
+    '.x.',
   ],
 ]
 
@@ -90,7 +99,7 @@ const flip = (item: string[]) => {
   return ret.map(v => v.join(''))
 }
 
-// 8 * ? * ['???','???']
+// 10 * ? * ['???','???']
 export const itemMasks = items.map(item => {
   const ret = [
     item,
@@ -105,7 +114,7 @@ export const itemMasks = items.map(item => {
   return uniqBy(ret, x => x.join('\n'))
 })
 
-// 8 * ?
+// 10 * ?
 export const itemDirections = items.map((item, i) => {
   const masks = [
     item,
@@ -125,7 +134,7 @@ export const itemDirections = items.map((item, i) => {
 console.log(itemMasks)
 console.log(itemDirections)
 
-// 8 * ?
+// 10 * ?
 export const firstXCols = itemMasks.map(masks => masks.map(mask => mask[0].indexOf('x')))
 
 
@@ -217,6 +226,6 @@ export function solve(board: string[][]) {
   }
 
   dfs(0)
-  console.log(`搜索次数: ${count}`)
+  console.log(`Number of searches: ${count}`)
   return ret
 }
