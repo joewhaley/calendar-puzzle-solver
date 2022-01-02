@@ -1,22 +1,14 @@
 # Calendar Puzzle Solver
 
-煎蛋摸鱼 - 日历拼图
+A solver for this calendar puzzle: https://poodlepuzzle.com/products/daily-calendar-puzzle?variant=39685475074107
 
-[原问题](https://www.dragonfjord.com/product/a-puzzle-a-day/")
+Does a depth-first search to discover all possible solutions. You can click through to show each solution, or click
+on a month, date, or weekday to solve another puzzle.
 
-[煎蛋](https://jandan.net)
+This is not optimized and so it can take a few seconds to generate all of the solutions. Please be patient.
 
-另一位摸鱼人士提供的 可以在线玩的 [在线版](https://x6ud.gitee.io/a-puzzle-a-day/#/)
+Based on this React project: https://github.com/zjuasmn/calendar-puzzle-solver
 
-[Mathigon版](https://mathigon.org/polypad/GT81i2cAdFhUDQ)
+## Online version
 
-
-点击月份和日期即可查看对应的所有解法，点击解法查看详情
-
-## 在线演示
-
-https://joinker.oss-cn-shanghai.aliyuncs.com/calendar-puzzle-solver/index.html
-
-## 本地运行
-
-参考 create-react-app https://github.com/facebook/create-react-app
+https://joewhaley.github.io/calendar-puzzle-solver/

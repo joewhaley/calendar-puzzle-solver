@@ -272,7 +272,7 @@ export default class App extends React.PureComponent<{}, AppState> {
           {solutions[index] && <SolutionView solution={solutions[index]} />}
         </div>
         <div style={{ color: '#333' }}>
-          {`Current solution: ${weekdayNames[weekday]}, ${monthNames[month]} ${day}`}
+          {`${weekdayNames[weekday]}, ${monthNames[month]} ${day}`}
         </div>
         {solutions.length > 0
           ? (
